@@ -1,0 +1,4 @@
+opencv ,
+numpy ,
+face_recognition,
+simple_facerec

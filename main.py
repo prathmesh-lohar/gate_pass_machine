@@ -24,20 +24,20 @@ root.grid_columnconfigure(1, weight=1)
 root.grid_rowconfigure(0, weight=1)
 
 # Placeholder labels for camera feed (can be replaced with actual video feed)
-cam1_label = tk.Label(cam1_frame, text="Face Detection")
+cam1_label = tk.Label(cam1_frame, text="Qr Code Detection")
 cam1_label.pack(expand=True, fill="both")
 
-cam2_label = tk.Label(cam2_frame, text="Qr Code Detection")
+cam2_label = tk.Label(cam2_frame, text="Face Detection")
 cam2_label.pack(expand=True, fill="both")
 
 
 
 # Define threads to run each camera feed function concurrently
 def start_qr_thread():
-    start_qr_read(1, cam1_label)
+    start_qr_read(0, cam1_label)
 
 def start_face_thread():
-    start_face_detection(0, cam2_label)
+    start_face_detection(1, cam2_label)
 
 
 # Create and start threads

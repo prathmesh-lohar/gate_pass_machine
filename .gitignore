@@ -1,4 +1,4 @@
-.conda
-.machine
-build
-dist
+.conda/
+.machine/
+build/
+dist/
